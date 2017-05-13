@@ -10,7 +10,7 @@
       require('sanctuary-type-identifiers')
     );
   }else{
-    global.concurrify = f(
+    global.flutureSanctuaryTypes = f(
       global.Fluture,
       global.sanctuaryDef,
       global.sanctuaryTypeIdentifiers
