@@ -49,4 +49,3 @@ describe('Fluture Sanctuary Types', function(){
   });
 
 });
-
