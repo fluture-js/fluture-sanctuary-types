@@ -6,7 +6,7 @@
 [![Build Status](https://travis-ci.org/fluture-js/fluture-sanctuary-types.svg?branch=master)](https://travis-ci.org/fluture-js/fluture-sanctuary-types)
 [![Code Coverage](https://codecov.io/gh/fluture-js/fluture-sanctuary-types/branch/master/graph/badge.svg)](https://codecov.io/gh/fluture-js/fluture-sanctuary-types)
 
-Fluture type definitions for Sanctuary.
+[Fluture][] type definitions for [Sanctuary][].
 
 > `npm install --save fluture sanctuary-def fluture-sanctuary-types`
 
@@ -23,3 +23,7 @@ const S = create({
 S.I(Future.of(1))
 //> Future.of(1)
 ```
+
+
+[Fluture]:    https://github.com/fluture-js/Fluture
+[Sanctuary]:  https://sanctuary.js.org/
