@@ -17,7 +17,9 @@ describe('Fluture Sanctuary Types', function(){
 
     it('returns a Type when given two Types', function(){
       var actual = types.FutureType($.Unknown, $.Unknown);
-      expect(type(actual)).to.equal('sanctuary-def/Type');
+      var typeInfo = type.parse(type(actual));
+      expect(typeInfo.namespace).to.equal('sanctuary-def');
+      expect(typeInfo.name).to.equal('Type');
     });
 
     it('tests positive on members', function(){
@@ -37,7 +39,9 @@ describe('Fluture Sanctuary Types', function(){
 
     it('returns a Type when given two Types', function(){
       var actual = types.ConcurrentFutureType($.Unknown, $.Unknown);
-      expect(type(actual)).to.equal('sanctuary-def/Type');
+      var typeInfo = type.parse(type(actual));
+      expect(typeInfo.namespace).to.equal('sanctuary-def');
+      expect(typeInfo.name).to.equal('Type');
     });
 
     it('tests positive on members', function(){
