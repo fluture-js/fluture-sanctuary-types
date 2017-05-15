@@ -1,0 +1,52 @@
+{
+  "name": "fluture-sanctuary-types",
+  "version": "0.0.0",
+  "description": "Fluture type definitions for Sanctuary",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf npm-debug.log .nyc_output coverage.lcov",
+    "lint": "eslint index.js test",
+    "release": "npm outdated --long && xyz --edit --repo git@github.com:fluture-js/fluture-sanctuary-types.git --tag 'X.Y.Z' --increment",
+    "test": "npm run lint && npm run test:unit",
+    "test:unit": "nyc mocha --ui bdd --reporter list --check-leaks --full-trace test/**.test.js",
+    "test:coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fluture-js/fluture-sanctuary-types.git"
+  },
+  "keywords": [
+    "fluture",
+    "sanctuary",
+    "types",
+    "typings",
+    "future",
+    "algebraic-data-types"
+  ],
+  "author": "Aldwin Vlasblom <aldwin.vlasblom@gmail.com> (https://github.com/Avaq)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fluture-js/fluture-sanctuary-types/issues"
+  },
+  "homepage": "https://github.com/fluture-js/fluture-sanctuary-types#readme",
+  "dependencies": {
+    "sanctuary-type-identifiers": "^2.0.0"
+  },
+  "peerDependencies": {
+    "fluture": ">=5.0.0 <7.0.0",
+    "sanctuary-def": ">=0.8.0 <0.12.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "codecov": "^2.2.0",
+    "eslint": "^3.19.0",
+    "eslint-config-warp": "^1.2.0",
+    "fantasy-land": "^3.2.0",
+    "fluture": "^6.0.1",
+    "mocha": "^3.3.0",
+    "nyc": "^10.3.2",
+    "rimraf": "^2.6.1",
+    "sanctuary-def": "^0.11.0",
+    "xyz": "^2.1.0"
+  }
+}
