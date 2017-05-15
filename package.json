@@ -43,7 +43,7 @@
     "eslint-config-warp": "^1.2.0",
     "fantasy-land": "^3.2.0",
     "fluture": "^6.0.1",
-    "mocha": "^3.3.0",
+    "mocha": "^3.4.1",
     "nyc": "^10.3.2",
     "rimraf": "^2.6.1",
     "sanctuary-def": "^0.11.0",
