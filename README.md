@@ -11,17 +11,17 @@
 > `npm install --save fluture sanctuary-def fluture-sanctuary-types`
 
 ```js
-const {create, env} = require('sanctuary');
+const {create, env, Unknown} = require('sanctuary-def');
 const {FutureType, ConcurrentFutureType} = require('fluture-sanctuary-types');
 const Future = require('fluture');
 
-const S = create({
+const def = create({
   checkTypes: true,
-  env: env.concat([FutureType, ConcurrentFutureType])
+  env: env.concat([
+    FutureType(Unknown, Unknown),
+    ConcurrentFutureType(Unknown, Unknown)
+  ])
 });
-
-S.I(Future.of(1))
-//> Future.of(1)
 ```
 
 
