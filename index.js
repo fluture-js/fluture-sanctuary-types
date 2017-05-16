@@ -42,9 +42,15 @@
     function(f){ return Future.seq(f).extractRight() }
   );
 
+  var env = [
+    FutureType($.Unknown, $.Unknown),
+    ConcurrentFutureType($.Unknown, $.Unknown)
+  ];
+
   return {
     FutureType: FutureType,
-    ConcurrentFutureType: ConcurrentFutureType
+    ConcurrentFutureType: ConcurrentFutureType,
+    env: env
   };
 
 }));
