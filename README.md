@@ -11,19 +11,42 @@
 > `npm install --save fluture sanctuary-def fluture-sanctuary-types`
 
 ```js
-const {create, env, Unknown} = require('sanctuary-def');
-const {FutureType, ConcurrentFutureType} = require('fluture-sanctuary-types');
+const {create, env} = require('sanctuary-def');
+const {env: flutureEnv} = require('fluture-sanctuary-types');
 const Future = require('fluture');
 
-const def = create({
-  checkTypes: true,
-  env: env.concat([
-    FutureType(Unknown, Unknown),
-    ConcurrentFutureType(Unknown, Unknown)
-  ])
-});
+const def = create({checkTypes: true, env: env.concat(flutureEnv)});
 ```
 
+## types
+
+The package also exports the type constructors in named exports.
+
+### `FutureType :: Type -> Type -> Type`
+
+The binary type constructor for members of Future.
+
+```js
+const {test, String, Number} = require('sanctuary-def');
+const {env, FutureType} = require('fluture-sanctuary-types');
+const {of} = require('fluture');
+
+test(env, FutureType(String, Number), of(1))
+//> true
+```
+
+### `ConcurrentFutureType :: Type -> Type -> Type`
+
+The binary type constructor for members of ConcurrentFuture.
+
+```js
+const {test, String, Number} = require('sanctuary-def');
+const {env, ConcurrentFutureType} = require('fluture-sanctuary-types');
+const {of, Par} = require('fluture');
+
+test(env, ConcurrentFutureType(String, Number), Par(of(1)))
+//> true
+```
 
 [Fluture]:    https://github.com/fluture-js/Fluture
 [Sanctuary]:  https://sanctuary.js.org/
