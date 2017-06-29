@@ -15,6 +15,7 @@
     "space-before-blocks": [2, "never"],
     "semi": [2, "always", {"omitLastInOneLineBlock": true}],
     "curly": 0,
-    "func-style": 0
+    "func-style": 0,
+    "padding-line-between-statements": 0
   }
 }
