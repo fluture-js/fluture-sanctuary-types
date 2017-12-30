@@ -33,7 +33,7 @@
     "sanctuary-type-identifiers": "^2.0.0"
   },
   "peerDependencies": {
-    "fluture": ">=5.0.0 <8.0.0",
+    "fluture": ">=5.0.0 <9.0.0",
     "sanctuary-def": ">=0.8.0 <0.15.0"
   },
   "devDependencies": {
@@ -42,7 +42,7 @@
     "eslint": "^4.14.0",
     "eslint-config-warp": "^2.0.0",
     "fantasy-land": "^3.2.0",
-    "fluture": "^7.0.0",
+    "fluture": "^8.0.0",
     "mocha": "^4.0.0",
     "nyc": "^11.4.1",
     "rimraf": "^2.6.1",
