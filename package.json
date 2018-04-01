@@ -46,7 +46,7 @@
     "mocha": "^5.0.0",
     "nyc": "^11.4.1",
     "rimraf": "^2.6.1",
-    "sanctuary-def": "^0.14.0",
+    "sanctuary-def": "^0.15.0",
     "xyz": "^3.0.0"
   }
 }
