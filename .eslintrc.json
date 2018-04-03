@@ -1,5 +1,6 @@
 {
-  "extends": ["warp"],
+  "root": true,
+  "extends": ["./node_modules/sanctuary-style/eslint-es3.json"],
   "parserOptions": {
     "sourceType": "script"
   },
@@ -12,10 +13,8 @@
     "global": true
   },
   "rules": {
-    "space-before-blocks": [2, "never"],
-    "semi": [2, "always", {"omitLastInOneLineBlock": true}],
-    "curly": 0,
-    "func-style": 0,
-    "padding-line-between-statements": 0
+    "func-call-spacing": ["off"],
+    "indent": ["off"],
+    "no-unexpected-multiline": ["off"]
   }
 }

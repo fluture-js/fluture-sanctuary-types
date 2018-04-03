@@ -1,50 +1,90 @@
-(function(global, f){
+//. # fluture-sanctuary-types
+//.
+//. [![Greenkeeper badge](https://badges.greenkeeper.io/fluture-js/fluture-sanctuary-types.svg)](https://greenkeeper.io/)
+//. [![Chat](https://badges.gitter.im/fluture-js/fluture-sanctuary-types.svg)](https://gitter.im/fluture-js/fluture)
+//. [![NPM Version](https://badge.fury.io/js/fluture-sanctuary-types.svg)](https://www.npmjs.com/package/fluture-sanctuary-types)
+//. [![Dependencies](https://david-dm.org/fluture-js/fluture-sanctuary-types.svg)](https://david-dm.org/fluture-js/fluture-sanctuary-types)
+//. [![Build Status](https://travis-ci.org/fluture-js/fluture-sanctuary-types.svg?branch=master)](https://travis-ci.org/fluture-js/fluture-sanctuary-types)
+//. [![Code Coverage](https://codecov.io/gh/fluture-js/fluture-sanctuary-types/branch/master/graph/badge.svg)](https://codecov.io/gh/fluture-js/fluture-sanctuary-types)
+//.
+//. [Fluture][] type definitions for [Sanctuary][].
+//.
+//. ```console
+//. $ npm install --save fluture sanctuary-def fluture-sanctuary-types
+//. ```
+//.
+//. ```js
+//. const {create, env} = require('sanctuary-def');
+//. const {env: flutureEnv} = require('fluture-sanctuary-types');
+//. const Future = require('fluture');
+//.
+//. const def = create({checkTypes: true, env: env.concat(flutureEnv)});
+//. ```
+(function(f) {
 
   'use strict';
 
-  /*istanbul ignore next*/
-  if(module && typeof module.exports !== 'undefined'){
+  /* istanbul ignore else */
+  if (typeof module === 'object' && typeof module.exports === 'object') {
     module.exports = f(
       require('fluture'),
       require('sanctuary-def'),
       require('sanctuary-type-identifiers')
     );
-  }else{
-    global.flutureSanctuaryTypes = f(
-      global.Fluture,
-      global.sanctuaryDef,
-      global.sanctuaryTypeIdentifiers
+  } else {
+    self.flutureSanctuaryTypes = f(
+      self.Fluture,
+      self.sanctuaryDef,
+      self.sanctuaryTypeIdentifiers
     );
   }
 
-}(/*istanbul ignore next*/(global || window || this), function(Future, $, type){
+//. ## Types
+//.
+//. The package also exports the type constructors in named exports.
+}(function(Future, $, type) {
 
   'use strict';
 
   //  $$type :: String
   var $$type = '@@type';
 
-  //  FutureType :: (Type, Type) -> Type
-  var FutureType = $.BinaryType(
-    type.parse(Future[$$type]).name,
-    'https://github.com/fluture-js/Fluture#readme',
-    Future.isFuture,
-    Future.extractLeft,
-    Future.extractRight
-  );
+  //# FutureType :: Type -> Type -> Type
+  //.
+  //. The binary type constructor for members of Future.
+  //.
+  //. ```js
+  //. > $.test (env) (FutureType ($.String) ($.Number)) (Future.of (1));
+  //. true
+  //. ```
+  var FutureType = $.BinaryType
+    (type.parse(Future[$$type]).name)
+    ('https://github.com/fluture-js/Fluture#readme')
+    (Future.isFuture)
+    (Future.extractLeft)
+    (Future.extractRight);
 
-  //  ConcurrentFutureType :: (Type, Type) -> Type
-  var ConcurrentFutureType = $.BinaryType(
-    type.parse(Future.Par[$$type]).name,
-    'https://github.com/fluture-js/Fluture#concurrentfuture',
-    function(x){ return type(x) === Future.Par[$$type] },
-    function(f){ return Future.seq(f).extractLeft() },
-    function(f){ return Future.seq(f).extractRight() }
-  );
+  //# ConcurrentFutureType :: Type -> Type -> Type
+  //.
+  //. The binary type constructor for members of ConcurrentFuture.
+  //.
+  //. ```js
+  //. > $.test
+  //. .   (env)
+  //. .   (ConcurrentFutureType ($.String) ($.Number))
+  //. .   (Future.Par.of (1));
+  //. true
+  //. ```
+  var ConcurrentFutureType = $.BinaryType
+    (type.parse(Future.Par[$$type]).name)
+    ('https://github.com/fluture-js/Fluture#concurrentfuture')
+    (function(x) { return type(x) === Future.Par[$$type]; })
+    (function(f) { return Future.seq(f).extractLeft(); })
+    (function(f) { return Future.seq(f).extractRight(); });
 
   var env = [
-    FutureType($.Unknown, $.Unknown),
-    ConcurrentFutureType($.Unknown, $.Unknown)
+    FutureType ($.Unknown) ($.Unknown),
+    ConcurrentFutureType ($.Unknown) ($.Unknown)
   ];
 
   return {
@@ -54,3 +94,6 @@
   };
 
 }));
+
+//. [Fluture]:    https://github.com/fluture-js/Fluture
+//. [Sanctuary]:  https://sanctuary.js.org/
