@@ -13,6 +13,8 @@
 //. $ npm install --save fluture sanctuary-def fluture-sanctuary-types
 //. ```
 //.
+//. ## Usage
+//.
 //. ```js
 //. const {create, env} = require('sanctuary-def');
 //. const {env: flutureEnv} = require('fluture-sanctuary-types');
@@ -39,9 +41,7 @@
     );
   }
 
-//. ## Types
-//.
-//. The package also exports the type constructors in named exports.
+//. ## API
 }(function(Future, $, type) {
 
   'use strict';
@@ -82,6 +82,10 @@
     (function(f) { return Future.seq(f).extractLeft(); })
     (function(f) { return Future.seq(f).extractRight(); });
 
+  //# env :: Array Type
+  //.
+  //. An Array containing all types applied to [`$.Unknown`][Unknown] for
+  //. direct use as a Sanctuary environment, as shown in [Usage](#usage).
   var env = [
     FutureType ($.Unknown) ($.Unknown),
     ConcurrentFutureType ($.Unknown) ($.Unknown)
@@ -97,3 +101,4 @@
 
 //. [Fluture]:    https://github.com/fluture-js/Fluture
 //. [Sanctuary]:  https://sanctuary.js.org/
+//. [Unknown]:    https://github.com/sanctuary-js/sanctuary-def#Unknown
