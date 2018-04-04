@@ -9,7 +9,11 @@
 
 [Fluture][] type definitions for [Sanctuary][].
 
-> `npm install --save fluture sanctuary-def fluture-sanctuary-types`
+```console
+$ npm install --save fluture sanctuary-def fluture-sanctuary-types
+```
+
+## Usage
 
 ```js
 const {create, env} = require('sanctuary-def');
@@ -19,35 +23,34 @@ const Future = require('fluture');
 const def = create({checkTypes: true, env: env.concat(flutureEnv)});
 ```
 
-## types
+## API
 
-The package also exports the type constructors in named exports.
-
-### `FutureType :: Type -> Type -> Type`
+<h4 name="FutureType"><code><a href="https://github.com/fluture-js/fluture-sanctuary-types/blob/v2.0.0/index.js#L52">FutureType :: Type -⁠> Type -⁠> Type</a></code></h4>
 
 The binary type constructor for members of Future.
 
 ```js
-const {test, String, Number} = require('sanctuary-def');
-const {env, FutureType} = require('fluture-sanctuary-types');
-const {of} = require('fluture');
-
-test(env, FutureType(String, Number), of(1))
-//> true
+> $.test (env) (FutureType ($.String) ($.Number)) (Future.of (1));
+true
 ```
 
-### `ConcurrentFutureType :: Type -> Type -> Type`
+<h4 name="ConcurrentFutureType"><code><a href="https://github.com/fluture-js/fluture-sanctuary-types/blob/v2.0.0/index.js#L67">ConcurrentFutureType :: Type -⁠> Type -⁠> Type</a></code></h4>
 
 The binary type constructor for members of ConcurrentFuture.
 
 ```js
-const {test, String, Number} = require('sanctuary-def');
-const {env, ConcurrentFutureType} = require('fluture-sanctuary-types');
-const {of, Par} = require('fluture');
-
-test(env, ConcurrentFutureType(String, Number), Par(of(1)))
-//> true
+> $.test
+.   (env)
+.   (ConcurrentFutureType ($.String) ($.Number))
+.   (Future.Par.of (1));
+true
 ```
+
+<h4 name="env"><code><a href="https://github.com/fluture-js/fluture-sanctuary-types/blob/v2.0.0/index.js#L85">env :: Array Type</a></code></h4>
+
+An Array containing all types applied to [`$.Unknown`][Unknown] for
+direct use as a Sanctuary environment, as shown in [Usage](#usage).
 
 [Fluture]:    https://github.com/fluture-js/Fluture
 [Sanctuary]:  https://sanctuary.js.org/
+[Unknown]:    https://github.com/sanctuary-js/sanctuary-def#Unknown
