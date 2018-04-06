@@ -101,4 +101,4 @@
 
 //. [Fluture]:    https://github.com/fluture-js/Fluture
 //. [Sanctuary]:  https://sanctuary.js.org/
-//. [Unknown]:    https://github.com/sanctuary-js/sanctuary-def#Unknown
+//. [Unknown]:    v:sanctuary-js/sanctuary-def#Unknown
