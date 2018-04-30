@@ -16,5 +16,26 @@
     "func-call-spacing": ["off"],
     "indent": ["off"],
     "no-unexpected-multiline": ["off"]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.md"],
+      "plugins": ["markdown"],
+      "env": {"es6": true},
+      "globals": {
+        "$": false,
+        "ConcurrentFutureType": false,
+        "Future": false,
+        "FutureType": false,
+        "def": false,
+        "env": false
+      },
+      "rules": {
+        "no-extra-semi": ["off"],
+        "no-redeclare": ["off"],
+        "no-unused-vars": ["error", {"varsIgnorePattern": "^(Future|def)$"}],
+        "semi-spacing": ["off"]
+      }
+    }
+  ]
 }
