@@ -45,7 +45,7 @@
     "fantasy-land": "^3.2.0",
     "fluture": "^8.0.0",
     "sanctuary-def": "0.15.0",
-    "sanctuary-scripts": "1.5.x",
+    "sanctuary-scripts": "^2.0.0",
     "sanctuary-type-classes": "^8.1.1"
   }
 }
