@@ -46,6 +46,7 @@
     "fluture": "^8.0.0",
     "sanctuary-def": "0.15.0",
     "sanctuary-scripts": "^2.0.0",
-    "sanctuary-type-classes": "^8.1.1"
+    "sanctuary-show": "^1.0.0",
+    "sanctuary-type-classes": "^9.0.0"
   }
 }
