@@ -16,16 +16,16 @@ $ npm install --save fluture sanctuary-def fluture-sanctuary-types
 ## Usage
 
 ```js
-const {create, env} = require('sanctuary-def');
-const {env: flutureEnv} = require('fluture-sanctuary-types');
-const Future = require('fluture');
+const {create, env} = require ('sanctuary-def');
+const {env: flutureEnv} = require ('fluture-sanctuary-types');
+const Future = require ('fluture');
 
-const def = create({checkTypes: true, env: env.concat(flutureEnv)});
+const def = create ({checkTypes: true, env: env.concat (flutureEnv)});
 ```
 
 ## API
 
-<h4 name="FutureType"><code><a href="https://github.com/fluture-js/fluture-sanctuary-types/blob/v2.0.0/index.js#L52">FutureType :: Type -⁠> Type -⁠> Type</a></code></h4>
+#### <a name="FutureType" href="https://github.com/fluture-js/fluture-sanctuary-types/blob/v2.1.0/index.js#L52">`FutureType :: Type -⁠> Type -⁠> Type`</a>
 
 The binary type constructor for members of Future.
 
@@ -34,7 +34,7 @@ The binary type constructor for members of Future.
 true
 ```
 
-<h4 name="ConcurrentFutureType"><code><a href="https://github.com/fluture-js/fluture-sanctuary-types/blob/v2.0.0/index.js#L67">ConcurrentFutureType :: Type -⁠> Type -⁠> Type</a></code></h4>
+#### <a name="ConcurrentFutureType" href="https://github.com/fluture-js/fluture-sanctuary-types/blob/v2.1.0/index.js#L67">`ConcurrentFutureType :: Type -⁠> Type -⁠> Type`</a>
 
 The binary type constructor for members of ConcurrentFuture.
 
@@ -46,11 +46,11 @@ The binary type constructor for members of ConcurrentFuture.
 true
 ```
 
-<h4 name="env"><code><a href="https://github.com/fluture-js/fluture-sanctuary-types/blob/v2.0.0/index.js#L85">env :: Array Type</a></code></h4>
+#### <a name="env" href="https://github.com/fluture-js/fluture-sanctuary-types/blob/v2.1.0/index.js#L85">`env :: Array Type`</a>
 
 An Array containing all types applied to [`$.Unknown`][Unknown] for
 direct use as a Sanctuary environment, as shown in [Usage](#usage).
 
 [Fluture]:    https://github.com/fluture-js/Fluture
 [Sanctuary]:  https://sanctuary.js.org/
-[Unknown]:    https://github.com/sanctuary-js/sanctuary-def#Unknown
+[Unknown]:    https://github.com/sanctuary-js/sanctuary-def/tree/v0.17.0#Unknown
