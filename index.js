@@ -16,11 +16,11 @@
 //. ## Usage
 //.
 //. ```js
-//. const {create, env} = require('sanctuary-def');
-//. const {env: flutureEnv} = require('fluture-sanctuary-types');
-//. const Future = require('fluture');
+//. const {create, env} = require ('sanctuary-def');
+//. const {env: flutureEnv} = require ('fluture-sanctuary-types');
+//. const Future = require ('fluture');
 //.
-//. const def = create({checkTypes: true, env: env.concat(flutureEnv)});
+//. const def = create ({checkTypes: true, env: env.concat (flutureEnv)});
 //. ```
 (function(f) {
 
@@ -28,13 +28,13 @@
 
   /* istanbul ignore else */
   if (typeof module === 'object' && typeof module.exports === 'object') {
-    module.exports = f(
-      require('fluture'),
-      require('sanctuary-def'),
-      require('sanctuary-type-identifiers')
+    module.exports = f (
+      require ('fluture'),
+      require ('sanctuary-def'),
+      require ('sanctuary-type-identifiers')
     );
   } else {
-    self.flutureSanctuaryTypes = f(
+    self.flutureSanctuaryTypes = f (
       self.Fluture,
       self.sanctuaryDef,
       self.sanctuaryTypeIdentifiers
@@ -42,7 +42,7 @@
   }
 
 //. ## API
-}(function(Future, $, type) {
+} (function(Future, $, type) {
 
   'use strict';
 
@@ -58,7 +58,7 @@
   //. true
   //. ```
   var FutureType = $.BinaryType
-    (type.parse(Future[$$type]).name)
+    (type.parse (Future[$$type]).name)
     ('https://github.com/fluture-js/Fluture#readme')
     (Future.isFuture)
     (Future.extractLeft)
@@ -76,11 +76,11 @@
   //. true
   //. ```
   var ConcurrentFutureType = $.BinaryType
-    (type.parse(Future.Par[$$type]).name)
+    (type.parse (Future.Par[$$type]).name)
     ('https://github.com/fluture-js/Fluture#concurrentfuture')
-    (function(x) { return type(x) === Future.Par[$$type]; })
-    (function(f) { return Future.seq(f).extractLeft(); })
-    (function(f) { return Future.seq(f).extractRight(); });
+    (function(x) { return type (x) === Future.Par[$$type]; })
+    (function(f) { return (Future.seq (f)).extractLeft (); })
+    (function(f) { return (Future.seq (f)).extractRight (); });
 
   //# env :: Array Type
   //.

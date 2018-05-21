@@ -12,11 +12,6 @@
     "require": true,
     "global": true
   },
-  "rules": {
-    "func-call-spacing": ["off"],
-    "indent": ["off"],
-    "no-unexpected-multiline": ["off"]
-  },
   "overrides": [
     {
       "files": ["*.md"],
