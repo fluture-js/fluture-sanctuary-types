@@ -1,6 +1,6 @@
 {
   "name": "fluture-sanctuary-types",
-  "version": "2.2.2",
+  "version": "3.0.0",
   "description": "Fluture type definitions for Sanctuary",
   "main": "index",
   "scripts": {
