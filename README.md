@@ -43,4 +43,4 @@ direct use as a Sanctuary environment, as shown in [Usage](#usage).
 
 [Fluture]:    https://github.com/fluture-js/Fluture
 [Sanctuary]:  https://sanctuary.js.org/
-[Unknown]:    v:sanctuary-js/sanctuary-def#Unknown
+[Unknown]:    https://github.com/sanctuary-js/sanctuary-def#Unknown
