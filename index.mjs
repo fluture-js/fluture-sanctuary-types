@@ -33,6 +33,7 @@ var $$type = '@@type';
 export var FutureType = $.BinaryType
   (type.parse (Future[$$type]).name)
   ('https://github.com/fluture-js/Fluture#readme')
+  ([])
   (isFuture)
   (extractLeft)
   (extractRight);
@@ -51,6 +52,7 @@ export var FutureType = $.BinaryType
 export var ConcurrentFutureType = $.BinaryType
   (type.parse (Par[$$type]).name)
   ('https://github.com/fluture-js/Fluture#concurrentfuture')
+  ([])
   (function(x) { return type (x) === Par[$$type]; })
   (function(f) { return (seq (f)).extractLeft (); })
   (function(f) { return (seq (f)).extractRight (); });
