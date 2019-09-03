@@ -13,6 +13,7 @@
     "url": "git://github.com/fluture-js/fluture-sanctuary-types.git"
   },
   "files": [
+    "/index.d.ts",
     "/index.js",
     "/index.mjs",
     "/LICENSE",
