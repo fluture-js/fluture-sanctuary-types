@@ -9,7 +9,7 @@ $ npm install --save fluture sanctuary-def fluture-sanctuary-types
 ## Usage
 
 ```js
-import $ = from 'sanctuary-def';
+import $ from 'sanctuary-def';
 import {env} from 'fluture-sanctuary-types';
 
 const def = $.create ({checkTypes: true, env: $.env.concat (env)});
