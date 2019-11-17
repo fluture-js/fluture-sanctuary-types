@@ -17,7 +17,7 @@
 
 import $ from 'sanctuary-def';
 import type from 'sanctuary-type-identifiers';
-import {Future, isFuture, extractLeft, extractRight, Par, seq} from 'fluture';
+import {Future, isFuture, extractLeft, extractRight, Par, seq} from 'fluture/index.js';
 
 //  $$type :: String
 var $$type = '@@type';
