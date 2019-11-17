@@ -12,5 +12,5 @@ if ! npm outdated --long; then
 fi
 
 npm run build
-transcribe --heading-level 4 --url "https://github.com/fluture-js/fluture-sanctuary-types/blob/v${VERSION?Environment variable not set}/{filename}#L{line}" index.mjs > README.md
+transcribe --heading-level 4 --url "https://github.com/fluture-js/fluture-sanctuary-types/blob/v${VERSION?Environment variable not set}/{filename}#L{line}" index.js > README.md
 git add README.md
