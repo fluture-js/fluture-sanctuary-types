@@ -48,7 +48,7 @@
     "fluture": "^12.0.0",
     "oletus": "^2.0.0",
     "rollup": "^1.27.0",
-    "sanctuary-def": "0.20.1",
+    "sanctuary-def": "0.21.0",
     "sanctuary-show": "^2.0.0",
     "sanctuary-type-classes": "^12.0.0",
     "transcribe": "^1.1.1",
