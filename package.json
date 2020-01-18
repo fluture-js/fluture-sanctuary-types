@@ -50,7 +50,7 @@
     "rollup": "^1.27.0",
     "sanctuary-def": "0.20.1",
     "sanctuary-show": "^2.0.0",
-    "sanctuary-type-classes": "^12.0.0",
+    "sanctuary-type-classes": "^12.1.0",
     "transcribe": "^1.1.1",
     "xyz": "^4.0.0"
   }
