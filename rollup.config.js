@@ -1,6 +1,10 @@
 export default {
   input: 'index.js',
-  external: ['fluture/index.js', 'sanctuary-def', 'sanctuary-type-identifiers'],
+  external: [
+    'fluture/index.js',
+    'sanctuary-def',
+    'sanctuary-type-identifiers'
+  ],
   output: {
     format: 'umd',
     name: 'flutureSanctuaryTypes',
@@ -9,10 +13,10 @@ export default {
     globals: {
       'fluture/index.js': 'Fluture',
       'sanctuary-def': 'sanctuaryDef',
-      'sanctuary-type-identifiers': 'sanctuaryTypeIdentifiers',
+      'sanctuary-type-identifiers': 'sanctuaryTypeIdentifiers'
     },
     paths: {
-      'fluture/index.js': 'fluture',
+      'fluture/index.js': 'fluture'
     }
   }
 };

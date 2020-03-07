@@ -9,15 +9,22 @@
 //. ## Usage
 //.
 //. ```js
-//. import $ = from 'sanctuary-def';
+//. import $ from 'sanctuary-def';
 //. import {env} from 'fluture-sanctuary-types';
 //.
-//. const def = $.create ({checkTypes: true, env: $.env.concat (env)});
+//. $.create ({checkTypes: true, env: $.env.concat (env)});
 //. ```
 
 import $ from 'sanctuary-def';
 import type from 'sanctuary-type-identifiers';
-import {Future, isFuture, extractLeft, extractRight, Par, seq} from 'fluture/index.js';
+import {
+  Future,
+  isFuture,
+  extractLeft,
+  extractRight,
+  Par,
+  seq
+} from 'fluture/index.js';
 
 //  $$type :: String
 var $$type = '@@type';
@@ -27,7 +34,9 @@ var $$type = '@@type';
 //. The binary type constructor for members of Future.
 //.
 //. ```js
-//. > $.test (env) (FutureType ($.String) ($.Number)) (Future.of (1));
+//. > $.test (env)
+//. .        (FutureType ($.String) ($.Number))
+//. .        (Future['fantasy-land/of'] (1));
 //. true
 //. ```
 export var FutureType = $.BinaryType
@@ -43,10 +52,9 @@ export var FutureType = $.BinaryType
 //. The binary type constructor for members of ConcurrentFuture.
 //.
 //. ```js
-//. > $.test
-//. .   (env)
-//. .   (ConcurrentFutureType ($.String) ($.Number))
-//. .   (Future.Par.of (1));
+//. > $.test (env)
+//. .        (ConcurrentFutureType ($.String) ($.Number))
+//. .        (Par['fantasy-land/of'] (1));
 //. true
 //. ```
 export var ConcurrentFutureType = $.BinaryType
