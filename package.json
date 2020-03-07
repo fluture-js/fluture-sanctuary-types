@@ -2,26 +2,6 @@
   "name": "fluture-sanctuary-types",
   "version": "5.0.0",
   "description": "Fluture type definitions for Sanctuary",
-  "main": "index.cjs",
-  "type": "module",
-  "module": "index.js",
-  "scripts": {
-    "build": "rollup -c rollup.config.js",
-    "release": "xyz --edit --script scripts/prerelease --increment",
-    "test": "c8 --check-coverage --branches 100 --functions 100 --lines 100 --statements 100 node --experimental-modules --no-warnings ./node_modules/.bin/oletus"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/fluture-js/fluture-sanctuary-types.git"
-  },
-  "files": [
-    "/index.d.ts",
-    "/index.js",
-    "/index.mjs",
-    "/LICENSE",
-    "/package.json",
-    "/README.md"
-  ],
   "keywords": [
     "fluture",
     "sanctuary",
@@ -30,12 +10,31 @@
     "future",
     "algebraic-data-types"
   ],
-  "author": "Aldwin Vlasblom <aldwin.vlasblom@gmail.com> (https://github.com/Avaq)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/fluture-js/fluture-sanctuary-types/issues"
+  "type": "module",
+  "main": "index.cjs",
+  "module": "index.js",
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "codecov": "codecov",
+    "doctest": "sanctuary-doctest",
+    "lint": "sanctuary-lint",
+    "release": "sanctuary-release",
+    "test": "npm run lint && sanctuary-test && npm run doctest"
   },
-  "homepage": "https://github.com/fluture-js/fluture-sanctuary-types#readme",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fluture-js/fluture-sanctuary-types.git"
+  },
+  "files": [
+    "/index.cjs",
+    "/index.d.ts",
+    "/index.js",
+    "/LICENSE",
+    "/package.json",
+    "/README.md"
+  ],
+  "author": "Aldwin Vlasblom <aldwin@avaq.it> (https://github.com/Avaq)",
+  "license": "MIT",
   "dependencies": {
     "sanctuary-type-identifiers": "^2.0.0"
   },
@@ -44,14 +43,14 @@
     "sanctuary-def": ">=0.20.0 <0.21.0"
   },
   "devDependencies": {
-    "c8": "^7.0.0",
-    "fluture": "^12.0.0",
+    "c8": "^7.1.0",
+    "codecov": "^3.2.0",
+    "fluture": "^12.2.0",
     "oletus": "^3.0.0",
-    "rollup": "^1.27.0",
+    "rollup": "^2.0.0",
     "sanctuary-def": "0.20.1",
+    "sanctuary-scripts": "^4.0.0",
     "sanctuary-show": "^2.0.0",
-    "sanctuary-type-classes": "^12.0.0",
-    "transcribe": "^1.1.1",
-    "xyz": "^4.0.0"
+    "sanctuary-type-classes": "^12.0.0"
   }
 }

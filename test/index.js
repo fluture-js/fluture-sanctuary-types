@@ -1,5 +1,3 @@
-'use strict';
-
 import assert from 'assert';
 import $ from 'sanctuary-def';
 import show from 'sanctuary-show';
@@ -17,7 +15,7 @@ function eq(actual, expected) {
   assert.strictEqual (Z.equals (actual, expected), true);
 }
 
-test('FutureType', () => {
+test ('FutureType', () => {
   eq (typeof FutureType, 'function');
   eq (FutureType.length, 1);
   eq (typeof FutureType ($.Unknown), 'function');
@@ -34,7 +32,7 @@ test('FutureType', () => {
   eq ($test (Type) (resolve (1)), true);
 });
 
-test('ConcurrentFutureType', () => {
+test ('ConcurrentFutureType', () => {
   eq (typeof ConcurrentFutureType, 'function');
   eq (ConcurrentFutureType.length, 1);
   eq (typeof ConcurrentFutureType ($.Unknown), 'function');
