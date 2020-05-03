@@ -15,7 +15,7 @@ import {env} from 'fluture-sanctuary-types';
 $.create ({checkTypes: true, env: $.env.concat (env)});
 ```
 
-#### <a name="FutureType" href="https://github.com/fluture-js/fluture-sanctuary-types/blob/v5.0.1/index.js#L32">`FutureType :: Type -⁠> Type -⁠> Type`</a>
+#### <a name="FutureType" href="https://github.com/fluture-js/fluture-sanctuary-types/blob/v6.0.0/index.js#L32">`FutureType :: Type -⁠> Type -⁠> Type`</a>
 
 The binary type constructor for members of Future.
 
@@ -26,7 +26,7 @@ The binary type constructor for members of Future.
 true
 ```
 
-#### <a name="ConcurrentFutureType" href="https://github.com/fluture-js/fluture-sanctuary-types/blob/v5.0.1/index.js#L50">`ConcurrentFutureType :: Type -⁠> Type -⁠> Type`</a>
+#### <a name="ConcurrentFutureType" href="https://github.com/fluture-js/fluture-sanctuary-types/blob/v6.0.0/index.js#L50">`ConcurrentFutureType :: Type -⁠> Type -⁠> Type`</a>
 
 The binary type constructor for members of ConcurrentFuture.
 
@@ -37,7 +37,7 @@ The binary type constructor for members of ConcurrentFuture.
 true
 ```
 
-#### <a name="env" href="https://github.com/fluture-js/fluture-sanctuary-types/blob/v5.0.1/index.js#L68">`env :: Array Type`</a>
+#### <a name="env" href="https://github.com/fluture-js/fluture-sanctuary-types/blob/v6.0.0/index.js#L68">`env :: Array Type`</a>
 
 An Array containing all types applied to [`$.Unknown`][Unknown] for
 direct use as a Sanctuary environment, as shown in [Usage](#usage).
