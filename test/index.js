@@ -3,7 +3,7 @@ import $ from 'sanctuary-def';
 import show from 'sanctuary-show';
 import Z from 'sanctuary-type-classes';
 import type from 'sanctuary-type-identifiers';
-import {Par, resolve} from 'fluture/index.js';
+import {Future, Par, resolve} from 'fluture/index.js';
 import {FutureType, ConcurrentFutureType} from '../index.js';
 import test from 'oletus';
 
@@ -28,6 +28,7 @@ test ('FutureType', () => {
   eq (typeInfo.namespace, 'sanctuary-def');
   eq (typeInfo.name, 'Type');
 
+  eq ($test (Type) (Future), false);
   eq ($test (Type) (Par (resolve (1))), false);
   eq ($test (Type) (resolve (1)), true);
 });
@@ -45,6 +46,7 @@ test ('ConcurrentFutureType', () => {
   eq (typeInfo.namespace, 'sanctuary-def');
   eq (typeInfo.name, 'Type');
 
+  eq ($test (Type) (Par), false);
   eq ($test (Type) (Par (resolve (1))), true);
   eq ($test (Type) (resolve (1)), false);
 });

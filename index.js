@@ -61,7 +61,7 @@ export var ConcurrentFutureType = $.BinaryType
   (type.parse (Par[$$type]).name)
   ('https://github.com/fluture-js/Fluture#concurrentfuture')
   ([])
-  (function(x) { return type (x) === Par[$$type]; })
+  (function(x) { return type (x) === Par[$$type] && x !== Par; })
   (function(f) { return (seq (f)).extractLeft (); })
   (function(f) { return (seq (f)).extractRight (); });
 
