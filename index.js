@@ -2,17 +2,41 @@
 //.
 //. [Fluture][] type definitions for [Sanctuary][].
 //.
+//. ## Usage
+//.
 //. ```console
-//. $ npm install --save fluture sanctuary-def fluture-sanctuary-types
+//. $ npm install --save fluture-sanctuary-types
 //. ```
 //.
-//. ## Usage
+//. Note that you also need [Fluture][] and [sanctuary-def][] installed.
+//. Sanctuary-def comes preinstalled with Sanctuary, so you could install
+//. either one. Fluture has to be installed separately. See `package.json`
+//. for compatible versions (defined in `peerDependencies`).
+//.
+//. ### EcmaScript Module
 //.
 //. ```js
 //. import $ from 'sanctuary-def';
-//. import {env} from 'fluture-sanctuary-types';
+//. import sanctuary from 'sanctuary';
+//. import {env, FutureType} from 'fluture-sanctuary-types/index.js';
+//. import {resolve} from 'fluture/index.js';
 //.
-//. $.create ({checkTypes: true, env: $.env.concat (env)});
+//. const S = sanctuary.create ({checkTypes: true, env: S.env.concat (env)});
+//.
+//. S.is (FutureType ($.String) ($.Number)) (resolve (42));
+//. ```
+//.
+//. ### CommonJS Module
+//.
+//. ```js
+//. const $ = require ('sanctuary-def');
+//. const {create} = require ('sanctuary');
+//. const {env, FutureType} = require ('fluture-sanctuary-types');
+//. const {resolve} = require ('fluture');
+//.
+//. const S = create ({checkTypes: true, env: S.env.concat (env)});
+//.
+//. S.is (FutureType ($.String) ($.Number)) (resolve (42));
 //. ```
 
 import $ from 'sanctuary-def';
@@ -74,6 +98,7 @@ export var env = [
   ConcurrentFutureType ($.Unknown) ($.Unknown)
 ];
 
-//. [Fluture]:    https://github.com/fluture-js/Fluture
-//. [Sanctuary]:  https://sanctuary.js.org/
-//. [Unknown]:    https://github.com/sanctuary-js/sanctuary-def#Unknown
+//. [Fluture]:       https://github.com/fluture-js/Fluture
+//. [Sanctuary]:     https://sanctuary.js.org/
+//. [sanctuary-def]: https://github.com/sanctuary-js/sanctuary-def
+//. [Unknown]:       https://github.com/sanctuary-js/sanctuary-def#Unknown
