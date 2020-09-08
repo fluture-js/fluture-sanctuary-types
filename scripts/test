@@ -8,6 +8,6 @@ branches="$(get min-branch-coverage)"
 
 c8 --check-coverage \
    --branches "$branches" \
-   node --experimental-modules \
-        --no-warnings \
-        ./node_modules/.bin/oletus
+   --reporter lcov \
+   --reporter text \
+   oletus

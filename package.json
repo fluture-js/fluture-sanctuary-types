@@ -13,6 +13,13 @@
   "type": "module",
   "main": "index.cjs",
   "module": "index.js",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.cjs"
+    },
+    "./index.js": "./index.js"
+  },
   "scripts": {
     "build": "rollup -c rollup.config.js",
     "codecov": "codecov",
