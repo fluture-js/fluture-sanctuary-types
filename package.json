@@ -47,7 +47,7 @@
   },
   "peerDependencies": {
     "fluture": ">=12.0.0-beta.6 <14.0.0",
-    "sanctuary-def": ">=0.20.0 <0.22.0"
+    "sanctuary-def": ">=0.20.0 <0.23.0"
   },
   "devDependencies": {
     "c8": "^7.1.0",
@@ -55,7 +55,7 @@
     "fluture": "^13.0.0",
     "oletus": "^3.0.0",
     "rollup": "^2.0.0",
-    "sanctuary-def": "^0.21.1",
+    "sanctuary-def": "^0.22.0",
     "sanctuary-scripts": "^4.0.0",
     "sanctuary-show": "^2.0.0",
     "sanctuary-type-classes": "^12.0.0"
