@@ -3,7 +3,7 @@ import $ from 'sanctuary-def';
 import show from 'sanctuary-show';
 import Z from 'sanctuary-type-classes';
 import type from 'sanctuary-type-identifiers';
-import {Future, Par, resolve} from 'fluture/index.js';
+import {Future, Par, resolve} from 'fluture';
 import {FutureType, ConcurrentFutureType} from '../index.js';
 import test from 'oletus';
 
