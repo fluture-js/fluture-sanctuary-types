@@ -34,15 +34,15 @@ const {create} = require ('sanctuary');
 const {env, FutureType} = require ('fluture-sanctuary-types');
 const {resolve} = require ('fluture');
 
-const S = create ({checkTypes: true, env: S.env.concat (env)});
+const S = create ({checkTypes: true, env: $.env.concat (env)});
 
 S.is (FutureType ($.String) ($.Number)) (resolve (42));
 ```
 
 #### <a name="FutureType" href="https://github.com/fluture-js/fluture-sanctuary-types/blob/v7.0.0/index.js#L56">`FutureType :: Type -⁠> Type -⁠> Type`</a>
 
-The binary type constructor for members of Future.
 
+The binary type constructor for members of Future.
 ```js
 > $.test (env)
 .        (FutureType ($.String) ($.Number))
