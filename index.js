@@ -21,7 +21,10 @@
 //. import {env, FutureType} from 'fluture-sanctuary-types/index.js';
 //. import {resolve} from 'fluture/index.js';
 //.
-//. const S = sanctuary.create ({checkTypes: true, env: S.env.concat (env)});
+//. const S = sanctuary.create ({
+//.   checkTypes: true,
+//.   env: sanctuary.env.concat (env)
+//. });
 //.
 //. S.is (FutureType ($.String) ($.Number)) (resolve (42));
 //. ```
@@ -30,11 +33,14 @@
 //.
 //. ```js
 //. const $ = require ('sanctuary-def');
-//. const {create} = require ('sanctuary');
+//. const sanctuary = require ('sanctuary');
 //. const {env, FutureType} = require ('fluture-sanctuary-types');
 //. const {resolve} = require ('fluture');
 //.
-//. const S = create ({checkTypes: true, env: S.env.concat (env)});
+//. const S = sanctuary.create ({
+//.   checkTypes: true,
+//.   env: sanctuary.env.concat (env)
+//. });
 //.
 //. S.is (FutureType ($.String) ($.Number)) (resolve (42));
 //. ```
