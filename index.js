@@ -22,7 +22,7 @@
 //. import {resolve} from 'fluture/index.js';
 //.
 //. const S = sanctuary.create ({
-//.   checkTypes: true,
+//.   checkTypes: process.env.NODE_ENV !== 'production',
 //.   env: sanctuary.env.concat (env)
 //. });
 //.
@@ -38,7 +38,7 @@
 //. const {resolve} = require ('fluture');
 //.
 //. const S = sanctuary.create ({
-//.   checkTypes: true,
+//.   checkTypes: process.env.NODE_ENV !== 'production',
 //.   env: sanctuary.env.concat (env)
 //. });
 //.
