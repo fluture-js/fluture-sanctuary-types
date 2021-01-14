@@ -34,7 +34,7 @@ const {create} = require ('sanctuary');
 const {env, FutureType} = require ('fluture-sanctuary-types');
 const {resolve} = require ('fluture');
 
-const S = create ({checkTypes: true, env: $.env.concat (env)});
+const S = create ({checkTypes: true, env: env.concat (env)});
 
 S.is (FutureType ($.String) ($.Number)) (resolve (42));
 ```
