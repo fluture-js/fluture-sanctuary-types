@@ -4,6 +4,8 @@
 //.
 //. ## Usage
 //.
+//. ### Node
+//.
 //. ```console
 //. $ npm install --save fluture-sanctuary-types
 //. ```
@@ -13,7 +15,9 @@
 //. either one. Fluture has to be installed separately. See `package.json`
 //. for compatible versions (defined in `peerDependencies`).
 //.
-//. ### EcmaScript Module
+//. On Node 12 and up, this module can be loaded directly with `import` or
+//. `require`. On Node versions below 12, `require` or the [esm][]-loader can
+//. be used.
 //.
 //. ```js
 //. import $ from 'sanctuary-def';
@@ -29,7 +33,21 @@
 //. S.is (FutureType ($.String) ($.Number)) (resolve (42));
 //. ```
 //.
-//. ### CommonJS Module
+//. ### Deno and Modern Browsers
+//.
+//. You can load the EcmaScript module from various content delivery networks:
+//.
+//. - [Skypack](https://cdn.skypack.dev/fluture-sanctuary-types@7.0.1)
+//. - [JSPM](https://jspm.dev/fluture-sanctuary-types@7.0.1)
+//. - [jsDelivr](https://cdn.jsdelivr.net/npm/fluture-sanctuary-types@7.0.1/+esm)
+//.
+//. ### Old Browsers and Code Pens
+//.
+//. There's a [UMD][] file included in the NPM package, also available via
+//. jsDelivr: https://cdn.jsdelivr.net/npm/fluture-sanctuary-types@7.0.1/dist/umd.js
+//.
+//. This file adds `flutureSanctuaryTypes` to the global scope, or use
+//. CommonJS/AMD when available.
 //.
 //. ```js
 //. const $ = require ('sanctuary-def');
@@ -108,3 +126,5 @@ export var env = [
 //. [Sanctuary]:     https://sanctuary.js.org/
 //. [sanctuary-def]: https://github.com/sanctuary-js/sanctuary-def
 //. [Unknown]:       https://github.com/sanctuary-js/sanctuary-def#Unknown
+//. [esm]:           https://github.com/standard-things/esm
+//. [UMD]:           https://github.com/umdjs/umd

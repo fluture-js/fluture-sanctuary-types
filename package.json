@@ -11,12 +11,12 @@
     "algebraic-data-types"
   ],
   "type": "module",
-  "main": "index.cjs",
+  "main": "./dist/umd.js",
   "module": "index.js",
   "exports": {
     ".": {
       "import": "./index.js",
-      "require": "./index.cjs"
+      "require": "./dist/umd.js"
     },
     "./index.js": "./index.js"
   },
@@ -33,7 +33,7 @@
     "url": "git://github.com/fluture-js/fluture-sanctuary-types.git"
   },
   "files": [
-    "/index.cjs",
+    "/dist",
     "/index.d.ts",
     "/index.js",
     "/LICENSE",
