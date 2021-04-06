@@ -37,14 +37,14 @@
 //.
 //. You can load the EcmaScript module from various content delivery networks:
 //.
-//. - [Skypack](https://cdn.skypack.dev/fluture-sanctuary-types@7.0.1)
-//. - [JSPM](https://jspm.dev/fluture-sanctuary-types@7.0.1)
-//. - [jsDelivr](https://cdn.jsdelivr.net/npm/fluture-sanctuary-types@7.0.1/+esm)
+//. - [Skypack](https://cdn.skypack.dev/fluture-sanctuary-types@7.1.0)
+//. - [JSPM](https://jspm.dev/fluture-sanctuary-types@7.1.0)
+//. - [jsDelivr](https://cdn.jsdelivr.net/npm/fluture-sanctuary-types@7.1.0/+esm)
 //.
 //. ### Old Browsers and Code Pens
 //.
 //. There's a [UMD][] file included in the NPM package, also available via
-//. jsDelivr: https://cdn.jsdelivr.net/npm/fluture-sanctuary-types@7.0.1/dist/umd.js
+//. jsDelivr: https://cdn.jsdelivr.net/npm/fluture-sanctuary-types@7.1.0/dist/umd.js
 //.
 //. This file adds `flutureSanctuaryTypes` to the global scope, or use
 //. CommonJS/AMD when available.
